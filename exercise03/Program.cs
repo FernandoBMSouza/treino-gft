@@ -10,8 +10,9 @@ namespace exercise03
             int quant = int.Parse(Console.ReadLine());
 
             Moradores[] moradores = new Moradores[quant];
-            int cont = 0, num = 0, telefone = 0;
 
+            int cont = 0, num = 0, telefone = 0;
+            bool cachorro;
             for(int i = 0; i < quant; i++)
             {
                 System.Console.WriteLine($"Morador #{i}");
@@ -25,7 +26,7 @@ namespace exercise03
                 moradores[i].ArmazenaTelefone(telefone);
 
                 System.Console.WriteLine("Tem Cachorro? (0/1): ");
-                bool cachorro = bool.Parse(Console.ReadLine());
+                cachorro = bool.Parse(Console.ReadLine());
                 if(!cachorro && moradores[i].LerNumero() % 2 != 0)
                 {
                     cont++;
